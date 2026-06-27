@@ -1,83 +1,58 @@
 # Understanding the Compilation Process
 
-A compiler translates a **high-level programming language** into a **lower-level language** that can eventually be executed by the computer.
+A compiler translates a high-level programming language into a lower-level language that the computer can understand.
 
-For example, a C compiler takes C source code as input and processes it through several stages before producing assembly (and eventually machine code).
+For this project, the compiler will take C source code as input and eventually generate x86-64 assembly.
 
 ## Compilation Pipeline
 
-### 1. Lexical Analysis (Lexer)
+### Lexical Analysis
 
-The lexer reads the source code character by character and groups them into meaningful **tokens**.
+The lexer reads the source code character by character and groups them into tokens.
 
-Examples of tokens include:
+Examples of tokens: keywords, identifiers, operators and literals.
 
-- Keywords (`int`, `return`)
-- Identifiers (`main`, `count`)
-- Operators (`+`, `=`, `==`)
-- Literals (`42`, `"Hello"`)
+One of the lexer's jobs is distinguishing between similar-looking operators like `=` and `==`.
 
-One important responsibility of the lexer is distinguishing between similar-looking operators such as `=` (assignment) and `==` (equality).
+### Parsing
 
----
+The parser checks whether the token stream follows the grammar of the C language.
 
-### 2. Parsing
+This stage catches syntax errors such as missing semicolons, unmatched parentheses, or malformed expressions. It also builds an Abstract Syntax Tree (AST), which represents the structure of the program.
 
-The parser takes the stream of tokens and checks whether they follow the grammar of the C language.
+### Semantic Analysis
 
-At this stage, syntax errors such as missing semicolons, unmatched parentheses, or incorrectly structured statements are detected.
+Once the syntax is valid, the compiler checks whether the program actually makes sense. Stuff like variables used before they are declared, type mismatches, non-valid operations and checking for scope.
 
-The parser also builds an **Abstract Syntax Tree (AST)** representing the structure of the program.
+### Code Generation
 
----
+After semantic analysis, the compiler generates lower-level code.
 
-### 3. Semantic Analysis
+For this project, the final output will be x86-64 assembly, which can then be assembled and linked into an executable.
 
-After the syntax is validated, the compiler checks whether the program is **meaningful**.
+## Why C?
 
-Some examples include:
+C is a good language for writing a compiler because it's relatively small, simple, and gives direct control over memory.
 
-- Using variables before they are declared
-- Type mismatches
-- Invalid operations
-- Scope checking
-
-A program can be syntactically correct while still being semantically incorrect.
-
----
-
-### 4. Code Generation
-
-Finally, the compiler translates the semantically valid program into a lower-level language.
-
-For this project, the compiler will eventually generate **x86-64 assembly**, which can then be assembled and linked into an executable.
-
----
-
-# Why C?
-
-C is an excellent language for writing a compiler because it is relatively small, simple, and provides direct control over memory and data structures.
-
-Unlike higher-level languages such as Python or Go, C has a much smaller runtime and standard library, allowing the focus to remain on compiler construction rather than language-specific infrastructure.
+Unlike languages like Python or Go, there isn't a large runtime or standard library to worry about, making it easier to focus on compiler construction itself.
 
 Many production compilers, including early versions of GCC, were written in C.
 
----
+## Development Environment
 
-# Development Environment
+This project is being developed on Windows 11 using MSYS2 UCRT64.
 
-This project is developed on **Windows 11** using **MSYS2 UCRT64**, providing a Unix-like development environment.
+### Tools
 
-## Tools
+- Windows 11
+- Visual Studio Code
+- MSYS2 UCRT64 Bash
+- GCC (MSYS2 UCRT64 Toolchain)
+- GNU Make
+- Git
 
-- **Operating System:** Windows 11
-- **Editor:** Visual Studio Code
-- **Shell:** MSYS2 UCRT64 Bash
-- **Compiler:** GCC (MSYS2 UCRT64 Toolchain)
-- **Build System:** GNU Make
-- **Version Control:** Git
+I already had an older MinGW GCC installation, but switched to the MSYS2 UCRT64 toolchain to better match the environment used by the tutorial.
 
-Although I already had an older MinGW GCC installation, this project uses the modern MSYS2 UCRT64 toolchain to closely match the Linux-based environment assumed by the tutorial.
+## Note
 
-Note: All content is mine, GPT-5.5 formatted only. 
-
+This project is a learning exercise. The implementation and explanations are my own. ChatGPT was used only as a learning aid for understanding concepts and polishing documentation.
