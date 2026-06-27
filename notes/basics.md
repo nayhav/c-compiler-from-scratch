@@ -1,4 +1,3 @@
-```md
 # Understanding the Compilation Process
 
 A compiler translates a **high-level programming language** into a **lower-level language** that can eventually be executed by the computer.
@@ -80,6 +79,5 @@ This project is developed on **Windows 11** using **MSYS2 UCRT64**, providing a 
 
 Although I already had an older MinGW GCC installation, this project uses the modern MSYS2 UCRT64 toolchain to closely match the Linux-based environment assumed by the tutorial.
 
----
 
 
