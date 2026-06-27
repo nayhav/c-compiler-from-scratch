@@ -16,3 +16,4 @@ This project is primarily inspired by:
 - Countless conversations with ChatGPT to help me understand compiler concepts and bridge gaps in my knowledge.
 
 I plan to build this compiler incrementally, documenting each stage as I learn and understand the underlying concepts.
+Note: I am also working on Windows 11 like an idiot, to give me a bigger challenge with following guides. Feel free not to.
