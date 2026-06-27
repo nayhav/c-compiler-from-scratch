@@ -79,5 +79,5 @@ This project is developed on **Windows 11** using **MSYS2 UCRT64**, providing a 
 
 Although I already had an older MinGW GCC installation, this project uses the modern MSYS2 UCRT64 toolchain to closely match the Linux-based environment assumed by the tutorial.
 
-
+Note: All content is mine, GPT-5.5 formatted only. 
 
