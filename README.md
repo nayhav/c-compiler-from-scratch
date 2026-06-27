@@ -20,4 +20,4 @@ This project is inspired by
 
 I plan to build this compiler incrementally, documenting each stage as I learn and understand the underlying concepts.
 
-Note: I am also working on Windows 11 like an idiot.
+This project is being developed on **Windows 11** using **MSYS2 UCRT64** to provide a Unix-like development environment. Although the tutorial uses Linux, the implementation and build process have been adapted to work on Windows.
