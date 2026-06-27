@@ -13,6 +13,9 @@ This project is inspired by
 - **A Compiler Writing Journey (ACWJ)** – https://github.com/DoctorWkt/acwj  
   An excellent GitHub repository that provided inspiration and additional implementation ideas.
 
+- **The SubC Compiler** - https://www.t3x.org/subc/
+  Public domain compiler for a clean subset of C.
+
 - Countless conversations with ChatGPT to help me understand compiler concepts and bridge gaps in my knowledge.
 
 I plan to build this compiler incrementally, documenting each stage as I learn and understand the underlying concepts.
