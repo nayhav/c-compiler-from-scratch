@@ -1,6 +1,6 @@
 ## About
 
-This is my attempt at writing a self-hosted C compiler that parses a subset of the C language, built incrementally to better understand how compilers work.
+This is my attempt at writing a self-hosted C compiler that parses a subset of the C language, built incrementally to better understand how compilers work. Will continue building on this.
 
 ### Resources
 
