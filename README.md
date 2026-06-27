@@ -1,7 +1,6 @@
 ## About
 
 This is my attempt at writing a self-hosted C compiler that parses a subset of the C language, built incrementally to better understand how compilers work.
-The goal of this project isn't just to end up with a working compiler, but to learn the concepts behind each stage, from lexical analysis and parsing to code generation, by implementing them sequentially.
 
 ### Resources
 
